@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MADEBYAI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="banner-container">
+      <img src="image/BANNER.jpg" alt="MADEBYAI BANNER" class="banner-image">
+    </div>
+    <div id="countdown-container">
+      <h3>До выхода первого номера журнала:</h3>
+      <div id="countdown-timer">
+        <span id="days">00</span> дн. 
+        <span id="hours">00</span> ч. 
+        <span id="minutes">00</span> мин. 
+        <span id="seconds">00</span> сек.
+      </div>
+    </div>
+    <!-- Новый раздел "О проекте" -->
+    <div id="about-section">
+      <h2>О проекте MADEBYAI</h2>
+      <p>MADEBYAI — это музыкальный эксперимент на тему сочетания человеческой эмоции и алгоритмической точности.</p>
+      <p>Здесь та музыка, в которой подлинность и технологии встречаются в едином пространстве.</p>
+      <p>И каждый релиз — это попытка выразить ту "душу", что может возникнуть в "коде".</p>
+    </div>
+    <div id="discography-section">
+      <ul id="albums-list"></ul>
+    </div>
+    <div id="album-details" style="display: none;">
+      <h2 id="album-title"></h2>
+      <p id="album-description"></p>
+      <p id="album-year"></p>
+      <p id="album-type"></p>
+      <ul id="tracklist"></ul>
+      <button id="back-btn">Вернуться к списку</button>
+    </div>
+  </div>
+  <button class="toggle-theme" id="theme-toggle">Светлая/тёмная тема</button>
+  <script src="script.js"></script>
+</body>
+</html>

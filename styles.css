@@ -1,0 +1,272 @@
+/* === ПЕРЕМЕННЫЕ CSS ДЛЯ ЦВЕТОВЫХ ТЕМ === */
+:root {
+  /* Светлая тема (по умолчанию) */
+  --bg-color: #f8f8f8;
+  --text-color: #1a1a1a;
+  --container-bg: #ffffff;
+  --border-color: #333333;
+}
+
+[data-theme="dark"] {
+  --bg-color: #0a0a0a;
+  --text-color: #f0f0f0;
+  --container-bg: #121212;
+  --border-color: #cccccc;
+}
+
+/* === ОСНОВНЫЕ СТИЛИ === */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: var(--container-bg);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  color: var(--text-color);
+}
+
+/* === СТИЛИ ДЛЯ ТАЙМЕРА === */
+#countdown-container {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: var(--container-bg);
+}
+
+#countdown-timer {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  color: var(--text-color);
+}
+
+/* === СТИЛИ ДЛЯ БАННЕРА === */
+.banner-container {
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+h2 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.8em;
+  color: var(--text-color);
+  margin-top: 0;
+  letter-spacing: -0.5px;
+}
+
+h3 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2em;
+  color: var(--text-color);
+  margin: 0;
+}
+
+p {
+  color: var(--text-color);
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 10px 0;
+}
+
+/* === СТИЛИ ДЛЯ РАЗДЕЛА "О ПРОЕКТЕ" === */
+#about-section {
+  margin-bottom: 25px;
+  padding: 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: var(--container-bg);
+}
+
+#about-section h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#about-section p {
+  margin: 10px 0;
+  text-align: justify;
+  line-height: 1.7;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: transparent;
+  transition: background-color 0.2s ease;
+  font-size: 18px;
+}
+
+li:hover {
+  background-color: var(--border-color);
+  color: var(--text-color);
+}
+
+#tracklist {
+  margin-top: 15px;
+  padding-left: 15px;
+}
+
+#tracklist li {
+  cursor: default;
+  background-color: transparent;
+  color: var(--text-color);
+  border: none;
+  padding-left: 20px;
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+}
+
+#tracklist li:before {
+  content: "• ";
+  position: absolute;
+  left: 0;
+  color: var(--text-color);
+}
+
+button {
+  margin: 10px;
+  padding: 12px 18px;
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background-color: var(--container-bg);
+  color: var(--text-color);
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+}
+
+button:hover {
+  background-color: var(--border-color);
+  color: var(--text-color);
+}
+
+/* Кнопка переключения темы */
+.toggle-theme {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+.toggle-theme:hover {
+  background-color: var(--border-color);
+  color: var(--text-color);
+}
+
+/* === АДАПТИВНОСТЬ === */
+/* Для экранов шириной до 600px */
+@media (max-width: 600px) {
+  body {
+    padding: 5px;
+    font-size: 16px;
+  }
+  .container {
+    padding: 15px;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+  #countdown-timer {
+    font-size: 1.2em;
+  }
+  p, li, button {
+    font-size: 16px;
+  }
+  #about-section p {
+    font-size: 16px;
+  }
+  .toggle-theme {
+    font-size: 0.9em;
+    padding: 6px 10px;
+    top: 8px;
+    right: 8px;
+  }
+  /* Уменьшаем отступы у списка треков */
+  #tracklist {
+    padding-left: 10px;
+  }
+  #tracklist li {
+    padding-left: 15px;
+  }
+}
+
+/* Для экранов шириной от 1200px */
+@media (min-width: 1200px) {
+  body {
+    padding: 20px;
+    font-size: 20px;
+  }
+  .container {
+    max-width: 800px;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.4rem;
+  }
+  #countdown-timer {
+    font-size: 1.6em;
+  }
+  p, li, button {
+    font-size: 20px;
+  }
+  #about-section p {
+    font-size: 20px;
+  }
+  .toggle-theme {
+    top: 20px;
+    right: 20px;
+  }
+}
