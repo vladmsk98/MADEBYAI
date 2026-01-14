@@ -77,6 +77,26 @@ const discography = [
     tracks: [
       "MADE BY AI (NEO SOUL HIP HOP)"
     ]
+  },
+  {
+    id: 4,
+    title: "MADE BY AI (ABSTRACT HIP HOP)",
+    year: 2026,
+    type: "Single",
+    description: "Экспериментальный рэп с нестандартной структурой и таинственными сэмплами",
+    tracks: [
+      "MADE BY AI (ABSTRACT HIP HOP)"
+    ]
+  },
+  {
+    id: 5,
+    title: "MADE BY AI (RUSSIAN TRIP HOP)",
+    year: 2026,
+    type: "Single",
+    description: "На русском языке, но тот же трип-хоп и тот же посыл",
+    tracks: [
+      "MADE BY AI (RUSSIAN TRIP HOP)"
+    ]
   }
 ];
 
